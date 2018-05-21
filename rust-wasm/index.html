@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+      fetch('hello_world.gc.wasm')
+        .then(r => r.arrayBuffer())
+        .then(r => WebAssembly.instantiate(r))
+        .then(wasm_module => {
+            alert(`2 + 1 = ${wasm_module.instance.exports.add_one(2)}`);
+        });
+    </script>
+</head>
+<body></body>
+</html>

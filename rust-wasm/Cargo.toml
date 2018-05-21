@@ -1,0 +1,9 @@
+[package]
+name = "hello-world"
+version = "0.1.0"
+authors = ["Florian Reisecker"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
